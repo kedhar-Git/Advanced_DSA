@@ -45,9 +45,8 @@ def totalFruit(fruits: List[int]) -> int:
             fruit_count[fruits[left]] -= 1
             if fruit_count[fruits[left]] == 0:
                 del fruit_count[fruits[left]]
-            left += 1
-        max_length = max(max_length, right - left + 1)
-    return max_length
-
+                left += 1
+            max_length = max(max_length, right - left + 1)
+        return max_length
 fruits = [1, 2, 1]
 print(totalFruit(fruits))
